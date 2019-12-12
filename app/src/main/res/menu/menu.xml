@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FirstActivity">
+
+    <item android:id="@+id/action_share"
+        android:title="공유하기"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_setting"
+        android:title="설정"
+        app:showAsAction="never" />
+
+</menu>

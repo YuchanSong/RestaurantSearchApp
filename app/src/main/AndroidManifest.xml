@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uchan.weather">
+
+    <!-- 인터넷 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 위치정보 퍼미션 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 전화걸기 퍼미션 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="Seoul-Fi"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SettingActivity"
+            android:label="Seoul-Fi" />
+
+        <!-- 카카오 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBGxnWvAdam9Sfd7rZchQhRz7X64J89yqk" />
+
+        <activity android:name=".ListActivity"></activity>
+    </application>
+
+</manifest>
